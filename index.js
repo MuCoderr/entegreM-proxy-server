@@ -14,4 +14,6 @@ app.get("/proxy", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Proxy server running on port 5000"));
+// Port numarasını kaldırın veya Vercel'in sağladığı portu kullanın
+const port = process.env.PORT || 5000; // Vercel'in portunu kullan veya varsayılan olarak 5000
+app.listen(port, () => console.log(`Proxy server running on port ${port}`));
